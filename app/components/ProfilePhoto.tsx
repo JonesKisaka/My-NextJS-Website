@@ -5,6 +5,7 @@ import { useState } from 'react'
 
 export default function ProfilePhoto() {
   const [imageError, setImageError] = useState(false)
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   return (
     <div className="profile-photo-container">
@@ -17,11 +18,15 @@ export default function ProfilePhoto() {
           <Image
             src="/jones-kisaka-photo.png"
             alt="Jones Kisaka"
-            width={300}
-            height={300}
+            width={350}
+            height={350}
             className="profile-image"
             priority
             onError={() => setImageError(true)}
+            onLoad={() => {
+              setImageLoaded(true)
+              setImageError(false)
+            }}
             unoptimized
           />
         )}
