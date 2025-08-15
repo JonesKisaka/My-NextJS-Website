@@ -73,15 +73,14 @@ a {
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.nav-brand .nav-link {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--text-dark);
-  transition: color 0.3s ease;
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .nav-menu .nav-link {
@@ -90,6 +89,7 @@ a {
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .nav-link:hover {
@@ -314,12 +314,13 @@ a {
     padding: 1rem;
   }
   
-  .nav-brand .nav-link {
-    font-size: 1.3rem;
+  .nav-menu {
+    gap: 1rem;
   }
   
   .nav-menu .nav-link {
     font-size: 1rem;
+    padding: 0.3rem 0.8rem;
   }
   
   .main-content {
@@ -366,6 +367,21 @@ a {
 }
 
 @media (max-width: 480px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .nav-menu {
+    gap: 0.8rem;
+  }
+  
+  .nav-menu .nav-link {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
   .profile-photo {
     width: 200px;
     height: 200px;
