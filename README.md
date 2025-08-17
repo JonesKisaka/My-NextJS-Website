@@ -65,37 +65,6 @@ public/
 └── placeholder-generator.html  # Tool for generating project images
 ```
 
-## About Page Features
-
-The About page showcases your projects in a beautiful Z-format layout:
-
-### 🎯 Z-Format Layout
-- Projects alternate between left and right alignment
-- Timeline badges positioned opposite to project content
-- Responsive design that stacks vertically on mobile
-
-### 🖼️ Image Carousel
-- Multiple images per project with smooth transitions
-- Navigation arrows and indicator dots
-- Auto-fit images with proper aspect ratio
-- Touch-friendly controls
-
-### ⏰ Timeline Display
-- Each project shows its timeline in a prominent badge
-- Color-coded with theme colors
-- Professional presentation of project dates
-
-### 🔗 Project Links
-- GitHub repository links with GitHub icon
-- LinkedIn post links with LinkedIn icon
-- Conditional display (no links shown for projects without them)
-- Opens in new tab for better UX
-
-### 📱 Responsive Design
-- Mobile-first approach
-- Adapts to different screen sizes
-- Touch-friendly interface
-
 ## Available Scripts
 
 - `npm run dev` - Start development server
@@ -103,32 +72,6 @@ The About page showcases your projects in a beautiful Z-format layout:
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 
-## Customization
-
-### Adding Project Images
-1. Place your project images in the `public/` folder
-2. Update the `images` array in the project data
-3. Use descriptive filenames (e.g., `arduino-project-1.jpg`)
-
-### Generating Placeholder Images
-If you don't have images yet:
-1. Open `public/placeholder-generator.html` in your browser
-2. Click the download buttons to generate placeholder images
-3. Save the images to your `public/` folder
-
-### Updating Project Data
-Edit the project arrays in `app/about/page.tsx`:
-```typescript
-{
-  id: 1,
-  title: "Your Project Title",
-  description: "Your project description...",
-  images: ["/your-image-1.jpg", "/your-image-2.jpg"],
-  githubLink: "https://github.com/yourusername/your-repo",
-  linkType: "github", // or "linkedin" or "none"
-  timeline: "2023"
-}
-```
 
 ## Technologies Used
 
@@ -138,12 +81,3 @@ Edit the project arrays in `app/about/page.tsx`:
 - ESLint with Next.js rules
 - Google Fonts (Inter)
 - CSS Modules
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome! 
