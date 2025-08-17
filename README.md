@@ -1,6 +1,6 @@
 # My-NextJS-Website
 
-A modern NextJS website built with TypeScript and JSX, created with the latest `create-next-app` standards.
+A modern NextJS portfolio website built with TypeScript and JSX, featuring a beautiful About page showcasing hardware and software projects.
 
 ## Features
 
@@ -9,8 +9,13 @@ A modern NextJS website built with TypeScript and JSX, created with the latest `
 - Modern JSX components
 - Responsive design
 - Beautiful gradient styling
+- Dark/Light theme toggle
 - ESLint configuration
 - Core Web Vitals optimization
+- About page with Z-format project layout
+- Image carousel support
+- Timeline display for projects
+- GitHub and LinkedIn link integration
 
 ## Getting Started
 
@@ -40,13 +45,56 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ```
 app/
-├── components/     # Reusable JSX components
-│   ├── Header.tsx
-│   └── Paragraph.tsx
+├── about/         # About page with project showcase
+│   └── page.tsx
+├── components/    # Reusable JSX components
+│   ├── Description.tsx
+│   ├── Footer.tsx
+│   ├── Name.tsx
+│   ├── Navigation.tsx
+│   ├── ProfilePhoto.tsx
+│   ├── ThemeToggle.tsx
+│   ├── Titles.tsx
+│   └── WorkSection.tsx
 ├── globals.css    # Global styles
 ├── layout.tsx     # Root layout component
 └── page.tsx       # Homepage component
+
+public/
+├── jones-kisaka-photo.png
+└── placeholder-generator.html  # Tool for generating project images
 ```
+
+## About Page Features
+
+The About page showcases your projects in a beautiful Z-format layout:
+
+### 🎯 Z-Format Layout
+- Projects alternate between left and right alignment
+- Timeline badges positioned opposite to project content
+- Responsive design that stacks vertically on mobile
+
+### 🖼️ Image Carousel
+- Multiple images per project with smooth transitions
+- Navigation arrows and indicator dots
+- Auto-fit images with proper aspect ratio
+- Touch-friendly controls
+
+### ⏰ Timeline Display
+- Each project shows its timeline in a prominent badge
+- Color-coded with theme colors
+- Professional presentation of project dates
+
+### 🔗 Project Links
+- GitHub repository links with GitHub icon
+- LinkedIn post links with LinkedIn icon
+- Conditional display (no links shown for projects without them)
+- Opens in new tab for better UX
+
+### 📱 Responsive Design
+- Mobile-first approach
+- Adapts to different screen sizes
+- Touch-friendly interface
 
 ## Available Scripts
 
@@ -54,6 +102,33 @@ app/
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+
+## Customization
+
+### Adding Project Images
+1. Place your project images in the `public/` folder
+2. Update the `images` array in the project data
+3. Use descriptive filenames (e.g., `arduino-project-1.jpg`)
+
+### Generating Placeholder Images
+If you don't have images yet:
+1. Open `public/placeholder-generator.html` in your browser
+2. Click the download buttons to generate placeholder images
+3. Save the images to your `public/` folder
+
+### Updating Project Data
+Edit the project arrays in `app/about/page.tsx`:
+```typescript
+{
+  id: 1,
+  title: "Your Project Title",
+  description: "Your project description...",
+  images: ["/your-image-1.jpg", "/your-image-2.jpg"],
+  githubLink: "https://github.com/yourusername/your-repo",
+  linkType: "github", // or "linkedin" or "none"
+  timeline: "2023"
+}
+```
 
 ## Technologies Used
 
