@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Image Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .placeholder {
+            width: 400px;
+            height: 300px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .download-btn {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .download-btn:hover {
+            background: #4f46e5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Placeholder Images</h1>
+        <p>Right-click on each image and "Save image as..." to download them to your public folder.</p>
+        
+        <h2>Hardware Projects</h2>
+        <div class="placeholder" id="hardware1">Yagi-Uda Antenna Design for LoRA Telemetry System</div>
+        <button class="download-btn" onclick="downloadImage('hardware1', 'yagi-antenna-1.jpg')">Download 1</button>
+        <button class="download-btn" onclick="downloadImage('hardware1', 'yagi-antenna-2.jpg')">Download 2</button>
+        <button class="download-btn" onclick="downloadImage('hardware1', 'yagi-antenna-3.jpg')">Download 3</button>
+        
+        <div class="placeholder" id="hardware2">Rocket Flight Computer - Avionics System</div>
+        <button class="download-btn" onclick="downloadImage('hardware2', 'rocket-flight-computer-1.jpg')">Download 1</button>
+        <button class="download-btn" onclick="downloadImage('hardware2', 'rocket-flight-computer-2.jpg')">Download 2</button>
+        <button class="download-btn" onclick="downloadImage('hardware2', 'rocket-flight-computer-3.jpg')">Download 3</button>
+        
+        <h2>Software Projects</h2>
+        <div class="placeholder" id="software1">Smart Water Meter Data Parser</div>
+        <button class="download-btn" onclick="downloadImage('software1', 'water-meter-parser-1.jpg')">Download 1</button>
+        <button class="download-btn" onclick="downloadImage('software1', 'water-meter-parser-2.jpg')">Download 2</button>
+        <button class="download-btn" onclick="downloadImage('software1', 'water-meter-parser-3.jpg')">Download 3</button>
+        
+        <div class="placeholder" id="software2">Personal Portfolio Website</div>
+        <button class="download-btn" onclick="downloadImage('software2', 'portfolio-website-1.jpg')">Download 1</button>
+        <button class="download-btn" onclick="downloadImage('software2', 'portfolio-website-2.jpg')">Download 2</button>
+    </div>
+
+    <script>
+        function downloadImage(elementId, filename) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const element = document.getElementById(elementId);
+            
+            canvas.width = 400;
+            canvas.height = 300;
+            
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 300);
+            gradient.addColorStop(0, '#6366f1');
+            gradient.addColorStop(1, '#8b5cf6');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 300);
+            
+            // Add text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 18px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            const text = element.textContent;
+            const lines = text.split(' ');
+            const lineHeight = 25;
+            const startY = 150 - (lines.length - 1) * lineHeight / 2;
+            
+            lines.forEach((line, index) => {
+                ctx.fillText(line, 200, startY + index * lineHeight);
+            });
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html> 

@@ -1,12 +1,13 @@
 import ThemeToggle from './ThemeToggle'
+import Link from 'next/link'
 
 export default function Navigation() {
   return (
     <nav className="navigation">
       <div className="nav-container">
         <div className="nav-menu">
-          <a href="#home" className="nav-link">Home</a>
-          <a href="#about" className="nav-link">About</a>
+          <Link href="/" className="nav-link">Home</Link>
+          <Link href="/about" className="nav-link">About</Link>
         </div>
         <ThemeToggle />
       </div>
