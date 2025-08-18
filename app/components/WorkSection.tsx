@@ -1,5 +1,7 @@
 'use client'
 
+import { useState } from 'react'
+
 interface Project {
   id: number
   title: string
@@ -40,6 +42,19 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, index, sectionType }: ProjectCardProps) {
   const isEven = index % 2 === 0
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const nextImage = () => {
+    if (project.images && project.images.length > 0) {
+      setCurrentImageIndex((prev) => (prev + 1) % project.images.length)
+    }
+  }
+
+  const prevImage = () => {
+    if (project.images && project.images.length > 0) {
+      setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length)
+    }
+  }
 
   return (
     <div className={`project-card ${isEven ? 'left-aligned' : 'right-aligned'}`}>
@@ -47,11 +62,42 @@ function ProjectCard({ project, index, sectionType }: ProjectCardProps) {
         <div className="project-media">
           <div className="image-carousel">
             <div className="carousel-container">
-              <div className="carousel-image">
-                <div className="project-image-placeholder">
-                  {project.title}
+              {project.images && project.images.length > 0 ? (
+                <>
+                  <div className="carousel-image">
+                    <img 
+                      src={project.images[currentImageIndex]} 
+                      alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                      className="project-image"
+                    />
+                  </div>
+                  {project.images.length > 1 && (
+                    <>
+                      <button className="carousel-button prev" onClick={prevImage}>
+                        ‹
+                      </button>
+                      <button className="carousel-button next" onClick={nextImage}>
+                        ›
+                      </button>
+                      <div className="carousel-indicators">
+                        {project.images.map((_, indicatorIndex) => (
+                          <button
+                            key={indicatorIndex}
+                            className={`indicator ${indicatorIndex === currentImageIndex ? 'active' : ''}`}
+                            onClick={() => setCurrentImageIndex(indicatorIndex)}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </>
+              ) : (
+                <div className="carousel-image">
+                  <div className="project-image-placeholder">
+                    {project.title}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

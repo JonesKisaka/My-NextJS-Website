@@ -35,17 +35,21 @@ export default function AboutPage() {
       title: "Yagi-Uda Antenna Design for LoRA Telemetry System",
       description: "Final year project (2023) focused on designing and implementing a Yagi-Uda antenna specifically optimized for LoRA (Long Range) telemetry systems. This project involved antenna theory, RF design principles, and practical implementation for long-range wireless communication applications.",
       images: [],
-      githubLink: "",
-      linkType: "none",
+      githubLink: "https://github.com/JonesKisaka/Yagi-Designs",
+      linkType: "none" as const,
       timeline: "2023"
     },
             {
           id: 2,
           title: "Rocket Flight Computer - Avionics System",
           description: "Designed and implemented a comprehensive flight computer for a rocket project using ESP32 microcontroller. Integrated multiple sensors including GPS module, BMP180 barometric pressure sensor, and MPU6050 accelerometer/gyroscope. Enhanced skills in embedded systems, sensor integration, and real-time data processing for aerospace applications.",
-          images: [],
+          images: [
+            "/RoutesWiFiFC.png",
+            "/FrontWiFi FC.png", 
+            "/BackWiFi FC.png"
+          ],
           githubLink: "https://www.linkedin.com/posts/jones-kisaka_from-the-archives-i-had-the-incredible-opportunity-activity-7221229741117173761-e0X7?utm_source=share&utm_medium=member_android&rcm=ACoAADYSsncBpDkFmTw0qxqXWAmT_1sK9960V48",
-          linkType: "linkedin",
+          linkType: "linkedin" as const,
           timeline: "2023"
         }
   ]
@@ -57,7 +61,7 @@ export default function AboutPage() {
       description: "Developed a sophisticated parser in Lua capable of decrypting and decoding data from smart water meters. Implemented AES-128 decryption algorithms to securely extract meter readings and consumption data. This project demonstrates expertise in embedded systems programming, cryptographic protocols, and data parsing for IoT devices.",
       images: [],
       githubLink: "",
-      linkType: "none",
+      linkType: "none" as const,
       timeline: "2025"
     },
     {
@@ -66,7 +70,7 @@ export default function AboutPage() {
       description: "Built a modern, responsive portfolio website using Next.js and TypeScript. Features include dynamic content, smooth animations, dark/light theme toggle, and optimal performance. Successfully deployed and hosted on Vercel with continuous integration and automatic deployments.",
       images: [],
       githubLink: "https://github.com/JonesKisaka/My-NextJS-Website",
-      linkType: "github",
+      linkType: "github" as const,
       timeline: "2025"
     }
   ]
