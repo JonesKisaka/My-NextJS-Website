@@ -67,7 +67,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="footer-text">
-          <p>&copy; 2024 Jones Kisaka. All rights reserved.</p>
+          <p>&copy; 2025 Jones Kisaka. All rights reserved.</p>
         </div>
       </div>
     </footer>
