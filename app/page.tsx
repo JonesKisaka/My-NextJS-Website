@@ -170,7 +170,8 @@ export default function Homepage() {
               <p>
                 Developed a Lua parser capable of decrypting and decoding data from smart
                 water meters using AES-128 decryption. Extracts meter readings and
-                consumption data from encrypted wM-Bus frames.
+                consumption data from encrypted wM-Bus frames. Meters used include the
+                Sharky 774, Axioma, Sontex 566, and Supercal 539.
               </p>
               <div className="tech-tags">
                 <span className="tech-tag">Lua</span>
