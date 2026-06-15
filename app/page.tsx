@@ -114,7 +114,7 @@ export default function Homepage() {
             </div>
 
             <div className="project-card reveal">
-              <span className="project-status status-ongoing">Ongoing</span>
+              <span className="project-status status-complete">Complete</span>
               <h3>SIM7080G Cellular Integration</h3>
               <p>
                 Bringing up the SIM7080G NB-IoT/Cat-M cellular module across multiple Linux
