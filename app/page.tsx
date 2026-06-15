@@ -25,7 +25,6 @@ export default function Homepage() {
     <>
       {/* NAV */}
       <nav>
-        <div className="logo">Jones Kisaka</div>
         <ul>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -40,6 +39,7 @@ export default function Homepage() {
         <div className="hero-inner">
           <div className="hero-content">
             <div className="hero-text">
+              <h2 className="hero-name">Jones Kisaka</h2>
               <div className="hero-tag">Embedded Systems Engineer</div>
               <h1>
                 I design the hardware <em>&amp;</em><br />

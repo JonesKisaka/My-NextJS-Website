@@ -76,16 +76,6 @@ nav {
   backdrop-filter: blur(12px);
 }
 
-nav .logo {
-  font-family: var(--font-mono, monospace);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: -0.5px;
-  color: var(--accent);
-}
-
-nav .logo span { color: var(--text-dim); }
-
 nav ul {
   list-style: none;
   display: flex;
@@ -143,6 +133,16 @@ nav ul a:hover { color: var(--accent); text-decoration: none; }
   object-fit: cover;
   border: 2px solid var(--accent);
   filter: grayscale(20%);
+}
+
+.hero-name {
+  font-family: var(--font-serif, 'Georgia', serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.1s forwards;
 }
 
 .hero-tag {
