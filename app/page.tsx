@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 export default function Homepage() {
@@ -150,39 +150,48 @@ export default function Homepage() {
               </div>
             </div>
 
-            <div className="project-card reveal">
-              <span className="project-status status-complete">Complete</span>
-              <h3>Rocket Flight Computer — Nakuja Project</h3>
-              <p>
-                Designed and built two custom flight computers for the Nakuja rocketry
-                project. Both boards feature the ESP32, BMP180 barometric pressure sensor,
-                MPU6050 IMU, GPS, pyrotechnic ejection channels, and onboard power
-                management with LiPo support. The first variant transmits real-time
-                telemetry over WiFi; the second over LoRa at 433 MHz. For the LoRa build,
-                also designed a 433 MHz Yagi-Uda antenna deployed at the ground base
-                station as a directional receiving antenna for long-range telemetry
-                reception. PCB designed in KiCad through multiple revisions.
-              </p>
-              <div className="tech-tags">
-                <span className="tech-tag">ESP32</span>
-                <span className="tech-tag">KiCad</span>
-                <span className="tech-tag">GPS</span>
-                <span className="tech-tag">BMP180</span>
-                <span className="tech-tag">MPU6050</span>
-                <span className="tech-tag">WiFi Telemetry</span>
-                <span className="tech-tag">LoRa 433MHz</span>
-                <span className="tech-tag">Yagi-Uda Antenna</span>
-                <span className="tech-tag">Pyrotechnics</span>
-              </div>
-              <div className="card-links">
-                <a href="#" className="card-link-btn" aria-label="View on GitHub">
-                  <GitHubIcon />
-                  <span>GitHub</span>
-                </a>
-                <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
-                  <LinkedInIcon />
-                  <span>LinkedIn</span>
-                </a>
+            <div className="project-card reveal project-card--wide">
+              <div className="project-card-inner">
+                <div className="project-card-text">
+                  <span className="project-status status-complete">Complete</span>
+                  <h3>Rocket Flight Computer — Nakuja Project</h3>
+                  <p>
+                    Designed and built two custom flight computers for the Nakuja rocketry
+                    project. Both boards feature the ESP32, BMP180 barometric pressure sensor,
+                    MPU6050 IMU, GPS, pyrotechnic ejection channels, and onboard power
+                    management with LiPo support. The first variant transmits real-time
+                    telemetry over WiFi; the second over LoRa at 433 MHz. For the LoRa build,
+                    also designed a 433 MHz Yagi-Uda antenna deployed at the ground base
+                    station as a directional receiving antenna for long-range telemetry
+                    reception. PCB designed in KiCad through multiple revisions.
+                  </p>
+                  <div className="tech-tags">
+                    <span className="tech-tag">ESP32</span>
+                    <span className="tech-tag">KiCad</span>
+                    <span className="tech-tag">GPS</span>
+                    <span className="tech-tag">BMP180</span>
+                    <span className="tech-tag">MPU6050</span>
+                    <span className="tech-tag">WiFi Telemetry</span>
+                    <span className="tech-tag">LoRa 433MHz</span>
+                    <span className="tech-tag">Yagi-Uda Antenna</span>
+                    <span className="tech-tag">Pyrotechnics</span>
+                  </div>
+                  <div className="card-links">
+                    <a href="#" className="card-link-btn" aria-label="View on GitHub">
+                      <GitHubIcon />
+                      <span>GitHub</span>
+                    </a>
+                    <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
+                      <LinkedInIcon />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+                <ImageCarousel images={[
+                  { src: '/FrontWiFi FC.png', alt: 'WiFi Flight Computer — Front' },
+                  { src: '/BackWiFi FC.png',  alt: 'WiFi Flight Computer — Back'  },
+                  { src: '/RoutesWiFiFC.png', alt: 'WiFi Flight Computer — PCB Routes' },
+                ]} />
               </div>
             </div>
 
@@ -380,6 +389,31 @@ export default function Homepage() {
         <p>&copy; 2026 Jones Kisaka — Built with precision.</p>
       </footer>
     </>
+  )
+}
+
+function ImageCarousel({ images }: { images: { src: string; alt: string }[] }) {
+  const [index, setIndex] = useState(0)
+  const prev = () => setIndex((i) => (i - 1 + images.length) % images.length)
+  const next = () => setIndex((i) => (i + 1) % images.length)
+  return (
+    <div className="carousel">
+      <div className="carousel-img-wrap">
+        <Image
+          src={images[index].src}
+          alt={images[index].alt}
+          fill
+          className="carousel-img"
+          style={{ objectFit: 'contain' }}
+        />
+      </div>
+      <div className="carousel-controls">
+        <button onClick={prev} className="carousel-btn" aria-label="Previous">&#8592;</button>
+        <span className="carousel-counter">{index + 1} / {images.length}</span>
+        <button onClick={next} className="carousel-btn" aria-label="Next">&#8594;</button>
+      </div>
+      <p className="carousel-caption">{images[index].alt}</p>
+    </div>
   )
 }
 

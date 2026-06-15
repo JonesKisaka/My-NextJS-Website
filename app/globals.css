@@ -382,6 +382,90 @@ section {
   border-color: var(--accent);
 }
 
+/* ── WIDE PROJECT CARD (with carousel) ── */
+.project-card--wide {
+  grid-column: 1 / -1;
+}
+
+.project-card-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.project-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── IMAGE CAROUSEL ── */
+.carousel {
+  flex-shrink: 0;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.carousel-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  object-fit: contain;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.carousel-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s, border-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.carousel-counter {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.carousel-caption {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .project-card-inner { flex-direction: column; }
+  .carousel { width: 100%; }
+}
+
 /* ── SKILLS ── */
 .skills-grid {
   display: grid;
