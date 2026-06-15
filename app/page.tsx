@@ -202,8 +202,8 @@ export default function Homepage() {
             <div className="skill-group reveal">
               <h3>Embedded Software</h3>
               <SkillRow label="C / C++" level={4} />
-              <SkillRow label="Linux Kernel / Drivers" level={3} />
-              <SkillRow label="Zephyr RTOS" level={3} />
+              <SkillRow label="Linux Kernel / Drivers" level={5} />
+              <SkillRow label="Zephyr RTOS" level={5} />
               <SkillRow label="Python" level={4} />
             </div>
 
