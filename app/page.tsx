@@ -227,7 +227,7 @@ export default function Homepage() {
           <div className="timeline">
             <div className="timeline-item reveal">
               <div className="timeline-date">2024 — Present</div>
-              <h3>Freelance / Independent</h3>
+              <h3>Abstract Machines &amp; Ultraviolet</h3>
               <div className="role">Embedded Systems Engineer</div>
               <p>
                 Designing IoT hardware and firmware for smart metering and connected
