@@ -132,26 +132,6 @@ export default function Homepage() {
 
             <div className="project-card reveal">
               <span className="project-status status-complete">Complete</span>
-              <h3>SIM7080G Cellular Integration</h3>
-              <p>
-                Interfaced the SIM7080G NB-IoT/Cat-M cellular module with the BeagleV-Fire,
-                a RISC-V SBC running Linux. Modified, built, and compiled the option.ko USB
-                serial driver from source to enable proper enumeration of the module on the
-                RISC-V platform. With the driver loaded, established communication with the
-                SIM7080G via AT commands using Python, enabling cellular connectivity on the
-                A0 gateway.
-              </p>
-              <div className="tech-tags">
-                <span className="tech-tag">SIM7080G</span>
-                <span className="tech-tag">Linux Kernel</span>
-                <span className="tech-tag">UART</span>
-                <span className="tech-tag">Python</span>
-                <span className="tech-tag">AT Commands</span>
-              </div>
-            </div>
-
-            <div className="project-card reveal">
-              <span className="project-status status-complete">Complete</span>
               <h3>Rocket Flight Computer — Avionics System</h3>
               <p>
                 Designed and built a flight computer for a rocket project using ESP32.
