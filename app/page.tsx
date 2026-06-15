@@ -158,23 +158,6 @@ export default function Homepage() {
 
             <div className="project-card reveal">
               <span className="project-status status-complete">Complete</span>
-              <h3>ESP-Hosted SPI Bridge</h3>
-              <p>
-                Integrated ESP32 as a wireless coprocessor to a BeagleV-Fire host over SPI
-                using the ESP-Hosted framework. Also developed a WiFi-to-SLIP bridge
-                firmware for ESP32-C6, later ported to a structured Zephyr RTOS project.
-              </p>
-              <div className="tech-tags">
-                <span className="tech-tag">ESP-Hosted</span>
-                <span className="tech-tag">SPI</span>
-                <span className="tech-tag">Zephyr RTOS</span>
-                <span className="tech-tag">SLIP</span>
-                <span className="tech-tag">WiFi</span>
-              </div>
-            </div>
-
-            <div className="project-card reveal">
-              <span className="project-status status-complete">Complete</span>
               <h3>Smart Water Meter Data Parser</h3>
               <p>
                 Developed a Lua parser capable of decrypting and decoding data from smart
