@@ -193,8 +193,8 @@ export default function Homepage() {
           <div className="skills-grid">
             <div className="skill-group reveal">
               <h3>Hardware Design</h3>
-              <SkillRow label="PCB Design (KiCad)" level={4} />
-              <SkillRow label="Schematic Capture" level={4} />
+              <SkillRow label="PCB Design (KiCad)" level={5} />
+              <SkillRow label="Schematic Capture" level={5} />
               <SkillRow label="Power Supply Design" level={3} />
               <SkillRow label="Signal Integrity" level={3} />
             </div>
