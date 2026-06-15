@@ -80,12 +80,14 @@ export default function Homepage() {
           <div className="projects-grid">
             <div className="project-card reveal">
               <span className="project-status status-active">Active</span>
-              <h3>S0 — Smart Meter Gateway</h3>
+              <h3>A0 — Smart Meter Gateway</h3>
               <p>
                 A custom-designed smart meter gateway board featuring ESP32-C6, LoRa,
                 NB-IoT, and wireless M-Bus modules. Pin-compatible with the BeagleV-Fire
                 development board. Iterated through multiple revisions solving SPI bus
-                contention, bootstrap pin conflicts, and overvoltage protection.
+                contention, bootstrap pin conflicts, and overvoltage protection. Includes
+                a companion baseboard providing power regulation, debug interfaces, and
+                connectivity expansion for seamless development and testing workflows.
               </p>
               <div className="tech-tags">
                 <span className="tech-tag">ESP32-C6</span>
@@ -94,22 +96,9 @@ export default function Homepage() {
                 <span className="tech-tag">wM-Bus</span>
                 <span className="tech-tag">KiCad</span>
                 <span className="tech-tag">BeagleV-Fire</span>
-              </div>
-            </div>
-
-            <div className="project-card reveal">
-              <span className="project-status status-active">Active</span>
-              <h3>S0 Baseboard</h3>
-              <p>
-                Companion baseboard for the S0 gateway providing power regulation, debug
-                interfaces, and connectivity expansion. Designed for pin-compatibility with
-                BeagleV-Fire for seamless development and testing workflows.
-              </p>
-              <div className="tech-tags">
                 <span className="tech-tag">PCB Design</span>
                 <span className="tech-tag">Power Management</span>
                 <span className="tech-tag">RISC-V</span>
-                <span className="tech-tag">KiCad</span>
               </div>
             </div>
 
@@ -231,7 +220,7 @@ export default function Homepage() {
               <div className="role">Embedded Systems Engineer</div>
               <p>
                 Designing IoT hardware and firmware for smart metering and connected
-                devices. Leading the S0 gateway project through multiple board revisions,
+                devices. Leading the A0 gateway project through multiple board revisions,
                 integrating cellular and LPWAN connectivity on RISC-V platforms.
               </p>
             </div>
@@ -262,7 +251,7 @@ export default function Homepage() {
               <div>
                 <h3>
                   <a href="https://www.linkedin.com/in/jones-kisaka" target="_blank" rel="noopener noreferrer">
-                    Six Hardware Design Challenges Across S0 Board Revisions
+                    Six Hardware Design Challenges Across A0 Board Revisions
                   </a>
                 </h3>
                 <p className="blog-excerpt">
