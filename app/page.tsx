@@ -132,18 +132,27 @@ export default function Homepage() {
 
             <div className="project-card reveal">
               <span className="project-status status-complete">Complete</span>
-              <h3>Rocket Flight Computer — Avionics System</h3>
+              <h3>Rocket Flight Computer — Nakuja Project</h3>
               <p>
-                Designed and built a flight computer for a rocket project using ESP32.
-                Integrated GPS, BMP180 barometric pressure, and MPU6050 IMU sensors.
-                Developed real-time data logging and telemetry over LoRa.
+                Designed and built two custom flight computers for the Nakuja rocketry
+                project. Both boards feature the ESP32, BMP180 barometric pressure sensor,
+                MPU6050 IMU, GPS, pyrotechnic ejection channels, and onboard power
+                management with LiPo support. The first variant transmits real-time
+                telemetry over WiFi; the second over LoRa at 433 MHz. For the LoRa build,
+                also designed a 433 MHz Yagi-Uda antenna deployed at the ground base
+                station as a directional receiving antenna for long-range telemetry
+                reception. PCB designed in KiCad through multiple revisions.
               </p>
               <div className="tech-tags">
                 <span className="tech-tag">ESP32</span>
-                <span className="tech-tag">GPS</span>
-                <span className="tech-tag">IMU</span>
-                <span className="tech-tag">LoRa</span>
                 <span className="tech-tag">KiCad</span>
+                <span className="tech-tag">GPS</span>
+                <span className="tech-tag">BMP180</span>
+                <span className="tech-tag">MPU6050</span>
+                <span className="tech-tag">WiFi Telemetry</span>
+                <span className="tech-tag">LoRa 433MHz</span>
+                <span className="tech-tag">Yagi-Uda Antenna</span>
+                <span className="tech-tag">Pyrotechnics</span>
               </div>
             </div>
 
