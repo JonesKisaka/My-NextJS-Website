@@ -141,6 +141,7 @@ nav ul a:hover { color: var(--accent); text-decoration: none; }
   font-weight: 700;
   color: var(--text);
   margin-bottom: 1rem;
+  white-space: nowrap;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.1s forwards;
 }
