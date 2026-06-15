@@ -280,18 +280,22 @@ section {
 }
 
 .project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   padding: 2rem;
   position: relative;
   overflow: hidden;
-  transition: border-color 0.3s, transform 0.3s;
-  border-radius: 0;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
 }
 
 .project-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+  border-color: rgba(var(--accent-rgb, 100, 220, 180), 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
 }
 
 .project-card::before {
@@ -359,9 +363,19 @@ section {
 }
 
 .skill-group {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
   padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .skill-group h3 {
