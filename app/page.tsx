@@ -24,7 +24,7 @@ export default function Homepage() {
     <>
       {/* NAV */}
       <nav>
-        <div className="logo">jones<span>.eng</span></div>
+        <div className="logo">Jones Kisaka</div>
         <ul>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#skills">Skills</a></li>
