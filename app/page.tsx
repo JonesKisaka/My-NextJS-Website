@@ -103,6 +103,33 @@ export default function Homepage() {
             </div>
 
             <div className="project-card reveal">
+              <span className="project-status status-active">Active</span>
+              <h3>A1 — Linux-Based Smart Meter Gateway</h3>
+              <p>
+                A1 combines the A0 hardware with the BeagleV-Fire RISC-V SBC, where A0
+                acts as a cape — bringing NB-IoT, LoRa, and wireless M-Bus connectivity
+                directly to a platform running full-blown Linux. Developed and modified the
+                option.ko USB serial driver from source to interface with the SIM7080G
+                cellular module on the A0, enabling AT command communication over Python.
+                Also achieved WiFi connectivity on the BeagleV-Fire by leveraging the
+                ESP-Hosted framework — using the onboard ESP32-C6 on A0 as a wireless
+                network dongle to establish a wlan connection on the host.
+              </p>
+              <div className="tech-tags">
+                <span className="tech-tag">BeagleV-Fire</span>
+                <span className="tech-tag">RISC-V</span>
+                <span className="tech-tag">Linux</span>
+                <span className="tech-tag">SIM7080G</span>
+                <span className="tech-tag">option.ko</span>
+                <span className="tech-tag">ESP-Hosted</span>
+                <span className="tech-tag">ESP32-C6</span>
+                <span className="tech-tag">NB-IoT</span>
+                <span className="tech-tag">LoRa</span>
+                <span className="tech-tag">wM-Bus</span>
+              </div>
+            </div>
+
+            <div className="project-card reveal">
               <span className="project-status status-complete">Complete</span>
               <h3>SIM7080G Cellular Integration</h3>
               <p>
