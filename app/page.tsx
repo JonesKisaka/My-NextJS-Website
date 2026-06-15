@@ -60,8 +60,8 @@ export default function Homepage() {
               <Image
                 src="/jones-kisaka-photo.png"
                 alt="Jones Kisaka"
-                width={320}
-                height={320}
+                width={500}
+                height={500}
                 className="hero-photo-img"
                 priority
               />
