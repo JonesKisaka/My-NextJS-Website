@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Homepage() {
   useEffect(() => {
@@ -37,20 +38,34 @@ export default function Homepage() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-inner">
-          <div className="hero-tag">Embedded Systems Engineer</div>
-          <h1>
-            I design the hardware <em>&amp;</em><br />
-            write the software<br />
-            that runs on it.
-          </h1>
-          <p className="hero-desc">
-            From PCB schematics to kernel drivers — I build connected systems at the
-            intersection of hardware and low-level software. Specialising in IoT,
-            RISC-V, and wireless communication.
-          </p>
-          <div className="hero-links">
-            <a href="#projects" className="btn primary">View Projects</a>
-            <a href="#contact" className="btn">Get in Touch</a>
+          <div className="hero-content">
+            <div className="hero-text">
+              <div className="hero-tag">Embedded Systems Engineer</div>
+              <h1>
+                I design the hardware <em>&amp;</em><br />
+                write the software<br />
+                that runs on it.
+              </h1>
+              <p className="hero-desc">
+                From PCB schematics to kernel drivers — I build connected systems at the
+                intersection of hardware and low-level software. Specialising in IoT,
+                RISC-V, and wireless communication.
+              </p>
+              <div className="hero-links">
+                <a href="#projects" className="btn primary">View Projects</a>
+                <a href="#contact" className="btn">Get in Touch</a>
+              </div>
+            </div>
+            <div className="hero-photo">
+              <Image
+                src="/jones-kisaka-photo.png"
+                alt="Jones Kisaka"
+                width={320}
+                height={320}
+                className="hero-photo-img"
+                priority
+              />
+            </div>
           </div>
         </div>
         <div className="circuit-line" />

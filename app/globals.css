@@ -118,6 +118,32 @@ nav ul a:hover { color: var(--accent); text-decoration: none; }
   width: 100%;
 }
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.8s forwards;
+}
+
+.hero-photo-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  filter: grayscale(20%);
+}
+
 .hero-tag {
   font-family: var(--font-mono, monospace);
   font-size: 0.75rem;
@@ -536,6 +562,8 @@ footer {
   .circuit-line { display: none; }
   .blog-entry { flex-direction: column; gap: 0.25rem; }
   .blog-date { min-width: unset; }
+  .hero-content { flex-direction: column-reverse; gap: 2rem; align-items: center; }
+  .hero-photo-img { width: 180px; height: 180px; }
 }
 
 /* ── ABOUT PAGE (legacy) ── */
