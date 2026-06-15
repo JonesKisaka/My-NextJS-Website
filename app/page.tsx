@@ -82,23 +82,25 @@ export default function Homepage() {
               <span className="project-status status-active">Active</span>
               <h3>A0 — Smart Meter Gateway</h3>
               <p>
-                A custom-designed smart meter gateway board featuring ESP32-C6, LoRa,
-                NB-IoT, and wireless M-Bus modules. Pin-compatible with the BeagleV-Fire
-                development board. Iterated through multiple revisions solving SPI bus
-                contention, bootstrap pin conflicts, and overvoltage protection. Includes
-                a companion baseboard providing power regulation, debug interfaces, and
-                connectivity expansion for seamless development and testing workflows.
+                A custom-designed Zephyr RTOS-based smart meter gateway built around the
+                ESP32-C6, featuring onboard NB-IoT and wireless M-Bus modules for meter
+                data collection. Pin-compatible with the BeagleV-Fire development board.
+                Paired with the A0 Baseboard — a companion power and expansion board that
+                supplies regulated power to the A0 main board, adds Ethernet connectivity,
+                an SD card interface for local data logging, and integrates the TSS721ADR
+                wired M-Bus module for direct wired meter communication.
               </p>
               <div className="tech-tags">
                 <span className="tech-tag">ESP32-C6</span>
-                <span className="tech-tag">LoRa</span>
+                <span className="tech-tag">Zephyr RTOS</span>
                 <span className="tech-tag">NB-IoT</span>
                 <span className="tech-tag">wM-Bus</span>
+                <span className="tech-tag">TSS721ADR</span>
+                <span className="tech-tag">Ethernet</span>
+                <span className="tech-tag">SD Card</span>
                 <span className="tech-tag">KiCad</span>
-                <span className="tech-tag">BeagleV-Fire</span>
                 <span className="tech-tag">PCB Design</span>
                 <span className="tech-tag">Power Management</span>
-                <span className="tech-tag">RISC-V</span>
               </div>
             </div>
 
@@ -107,7 +109,7 @@ export default function Homepage() {
               <h3>A1 — Linux-Based Smart Meter Gateway</h3>
               <p>
                 A1 combines the A0 hardware with the BeagleV-Fire RISC-V SBC, where A0
-                acts as a cape — bringing NB-IoT, LoRa, and wireless M-Bus connectivity
+                acts as a cape — bringing NB-IoT and wireless M-Bus connectivity
                 directly to a platform running full-blown Linux. Developed and modified the
                 option.ko USB serial driver from source to interface with the SIM7080G
                 cellular module on the A0, enabling AT command communication over Python.
@@ -124,7 +126,6 @@ export default function Homepage() {
                 <span className="tech-tag">ESP-Hosted</span>
                 <span className="tech-tag">ESP32-C6</span>
                 <span className="tech-tag">NB-IoT</span>
-                <span className="tech-tag">LoRa</span>
                 <span className="tech-tag">wM-Bus</span>
               </div>
             </div>
