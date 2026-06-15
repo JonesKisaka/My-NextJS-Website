@@ -131,13 +131,14 @@ nav ul a:hover { color: var(--accent); text-decoration: none; }
 
 .hero-photo {
   flex-shrink: 0;
+  margin-right: -3rem;
   opacity: 0;
   animation: fadeUp 0.6s ease 0.8s forwards;
 }
 
 .hero-photo-img {
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent);
