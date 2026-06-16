@@ -154,10 +154,6 @@ export default function Homepage() {
                       <GitHubIcon />
                       <span>GitHub</span>
                     </a>
-                    <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
-                      <LinkedInIcon />
-                      <span>LinkedIn</span>
-                    </a>
                   </div>
                 </div>
                 <ImageCarousel images={[
@@ -194,10 +190,6 @@ export default function Homepage() {
                     <span className="tech-tag">Pyrotechnics</span>
                   </div>
                   <div className="card-links">
-                    <a href="#" className="card-link-btn" aria-label="View on GitHub">
-                      <GitHubIcon />
-                      <span>GitHub</span>
-                    </a>
                     <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
                       <LinkedInIcon />
                       <span>LinkedIn</span>
@@ -228,13 +220,9 @@ export default function Homepage() {
                 <span className="tech-tag">IoT</span>
               </div>
               <div className="card-links">
-                <a href="#" className="card-link-btn" aria-label="View on GitHub">
+                <a href="https://github.com/absmach/wmbus" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
                   <GitHubIcon />
                   <span>GitHub</span>
-                </a>
-                <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
-                  <LinkedInIcon />
-                  <span>LinkedIn</span>
                 </a>
               </div>
             </div>
