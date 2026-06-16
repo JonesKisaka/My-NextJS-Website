@@ -116,8 +116,8 @@ export default function Homepage() {
                   </div>
                 </div>
                 <ImageCarousel images={[
-                  { src: '/a0.png',        alt: 'A0 Main Board' },
                   { src: '/a0_anim.png',   alt: 'A0 Main Board — 3D Render' },
+                  { src: '/a0.png',        alt: 'A0 Main Board' },
                   { src: '/baseboard.png', alt: 'A0 Baseboard' },
                 ]} />
               </div>
