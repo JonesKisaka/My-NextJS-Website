@@ -80,7 +80,7 @@ export default function Homepage() {
           <div className="projects-grid">
             <div className="project-card reveal">
               <span className="project-status status-active">Active</span>
-              <h3>A0 — Smart Meter Gateway</h3>
+              <h3>A0 — ZephyrOS-based Smart Meter Gateway</h3>
               <p>
                 A custom-designed Zephyr RTOS-based smart meter gateway built around the
                 ESP32-C6, featuring onboard NB-IoT and wireless M-Bus modules for meter
