@@ -329,21 +329,6 @@ export default function Homepage() {
                 </p>
               </div>
             </div>
-
-            <div className="blog-entry reveal">
-              <span className="blog-date">2025</span>
-              <div>
-                <h3>
-                  <a href="https://www.linkedin.com/in/jones-kisaka" target="_blank" rel="noopener noreferrer">
-                    WiFi-to-SLIP Bridge on ESP32-C6 with Zephyr
-                  </a>
-                </h3>
-                <p className="blog-excerpt">
-                  Building and porting a network bridge firmware from ESP-IDF to a
-                  structured Zephyr RTOS project.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
