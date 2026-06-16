@@ -316,31 +316,16 @@ export default function Homepage() {
 
           <div className="blog-list">
             <div className="blog-entry reveal">
-              <span className="blog-date">2025</span>
+              <span className="blog-date">2026</span>
               <div>
                 <h3>
-                  <a href="https://www.linkedin.com/in/jones-kisaka" target="_blank" rel="noopener noreferrer">
-                    Six Hardware Design Challenges Across A0 Board Revisions
+                  <a href="https://medium.com/abstract-machines-blog/building-the-s0-the-iot-gateway-of-the-future-blog-d708aa1d1c87" target="_blank" rel="noopener noreferrer">
+                    Building the S0 — The IoT Gateway of the Future
                   </a>
                 </h3>
                 <p className="blog-excerpt">
-                  SPI bus contention, ESP32-C6 bootstrap conflicts, overvoltage protection
-                  redesign, and more — lessons from iterating on a production IoT gateway.
-                </p>
-              </div>
-            </div>
-
-            <div className="blog-entry reveal">
-              <span className="blog-date">2025</span>
-              <div>
-                <h3>
-                  <a href="https://www.linkedin.com/in/jones-kisaka" target="_blank" rel="noopener noreferrer">
-                    Bringing Up a SIM7080G on RISC-V Linux
-                  </a>
-                </h3>
-                <p className="blog-excerpt">
-                  USB enumeration, custom kernel modules, and serial debugging across
-                  Ubuntu and BeagleV-Fire platforms.
+                  The design story behind the S0: rethinking the smart meter gateway from
+                  the ground up for a connected, edge-driven IoT future.
                 </p>
               </div>
             </div>
