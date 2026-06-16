@@ -103,11 +103,11 @@ export default function Homepage() {
                 <span className="tech-tag">Power Management</span>
               </div>
               <div className="card-links">
-                <a href="#" className="card-link-btn" aria-label="View on GitHub">
+                <a href="https://github.com/absmach/a0" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
                   <GitHubIcon />
                   <span>GitHub</span>
                 </a>
-                <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
+                <a href="https://www.linkedin.com/posts/jones-kisaka_iot-edgecomputing-risc-activity-7432077516082798593-1cl0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYSsncBpDkFmTw0qxqXWAmT_1sK9960V48" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on LinkedIn">
                   <LinkedInIcon />
                   <span>LinkedIn</span>
                 </a>
@@ -139,7 +139,7 @@ export default function Homepage() {
                 <span className="tech-tag">wM-Bus</span>
               </div>
               <div className="card-links">
-                <a href="#" className="card-link-btn" aria-label="View on GitHub">
+                <a href="https://github.com/absmach/a1" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
                   <GitHubIcon />
                   <span>GitHub</span>
                 </a>
