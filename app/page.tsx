@@ -78,75 +78,92 @@ export default function Homepage() {
           <h2 className="section-title">Projects</h2>
 
           <div className="projects-grid">
-            <div className="project-card reveal">
-              <span className="project-status status-active">Active</span>
-              <h3>A0 — ZephyrOS-based Smart Meter Gateway</h3>
-              <p>
-                A custom-designed Zephyr RTOS-based smart meter gateway built around the
-                ESP32-C6, featuring onboard NB-IoT and wireless M-Bus modules for meter
-                data collection. Pin-compatible with the BeagleV-Fire development board.
-                Paired with the A0 Baseboard — a companion power and expansion board that
-                supplies regulated power to the A0 main board, adds Ethernet connectivity,
-                an SD card interface for local data logging, and integrates the TSS721ADR
-                wired M-Bus module for direct wired meter communication.
-              </p>
-              <div className="tech-tags">
-                <span className="tech-tag">ESP32-C6</span>
-                <span className="tech-tag">Zephyr RTOS</span>
-                <span className="tech-tag">NB-IoT</span>
-                <span className="tech-tag">wM-Bus</span>
-                <span className="tech-tag">TSS721ADR</span>
-                <span className="tech-tag">Ethernet</span>
-                <span className="tech-tag">SD Card</span>
-                <span className="tech-tag">KiCad</span>
-                <span className="tech-tag">PCB Design</span>
-                <span className="tech-tag">Power Management</span>
-              </div>
-              <div className="card-links">
-                <a href="https://github.com/absmach/a0" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
-                  <GitHubIcon />
-                  <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/posts/jones-kisaka_iot-edgecomputing-risc-activity-7432077516082798593-1cl0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYSsncBpDkFmTw0qxqXWAmT_1sK9960V48" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on LinkedIn">
-                  <LinkedInIcon />
-                  <span>LinkedIn</span>
-                </a>
+            <div className="project-card reveal project-card--wide">
+              <div className="project-card-inner">
+                <div className="project-card-text">
+                  <span className="project-status status-active">Active</span>
+                  <h3>A0 — ZephyrOS-based Smart Meter Gateway</h3>
+                  <p>
+                    A custom-designed Zephyr RTOS-based smart meter gateway built around the
+                    ESP32-C6, featuring onboard NB-IoT and wireless M-Bus modules for meter
+                    data collection. Pin-compatible with the BeagleV-Fire development board.
+                    Paired with the A0 Baseboard — a companion power and expansion board that
+                    supplies regulated power to the A0 main board, adds Ethernet connectivity,
+                    an SD card interface for local data logging, and integrates the TSS721ADR
+                    wired M-Bus module for direct wired meter communication.
+                  </p>
+                  <div className="tech-tags">
+                    <span className="tech-tag">ESP32-C6</span>
+                    <span className="tech-tag">Zephyr RTOS</span>
+                    <span className="tech-tag">NB-IoT</span>
+                    <span className="tech-tag">wM-Bus</span>
+                    <span className="tech-tag">TSS721ADR</span>
+                    <span className="tech-tag">Ethernet</span>
+                    <span className="tech-tag">SD Card</span>
+                    <span className="tech-tag">KiCad</span>
+                    <span className="tech-tag">PCB Design</span>
+                    <span className="tech-tag">Power Management</span>
+                  </div>
+                  <div className="card-links">
+                    <a href="https://github.com/absmach/a0" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
+                      <GitHubIcon />
+                      <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/posts/jones-kisaka_iot-edgecomputing-risc-activity-7432077516082798593-1cl0?utm_source=share&utm_medium=member_desktop&rcm=ACoAADYSsncBpDkFmTw0qxqXWAmT_1sK9960V48" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on LinkedIn">
+                      <LinkedInIcon />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+                <ImageCarousel images={[
+                  { src: '/a0.png',        alt: 'A0 Main Board' },
+                  { src: '/a0_anim.png',   alt: 'A0 Main Board — 3D Render' },
+                  { src: '/baseboard.png', alt: 'A0 Baseboard' },
+                ]} />
               </div>
             </div>
 
-            <div className="project-card reveal">
-              <span className="project-status status-active">Active</span>
-              <h3>A1 — Linux-Based Smart Meter Gateway</h3>
-              <p>
-                A1 combines the A0 hardware with the BeagleV-Fire RISC-V SBC, where A0
-                acts as a cape — bringing NB-IoT and wireless M-Bus connectivity
-                directly to a platform running full-blown Linux. Developed and modified the
-                option.ko USB serial driver from source to interface with the SIM7080G
-                cellular module on the A0, enabling AT command communication over Python.
-                Also achieved WiFi connectivity on the BeagleV-Fire by leveraging the
-                ESP-Hosted framework — using the onboard ESP32-C6 on A0 as a wireless
-                network dongle to establish a wlan connection on the host.
-              </p>
-              <div className="tech-tags">
-                <span className="tech-tag">BeagleV-Fire</span>
-                <span className="tech-tag">RISC-V</span>
-                <span className="tech-tag">Linux</span>
-                <span className="tech-tag">SIM7080G</span>
-                <span className="tech-tag">option.ko</span>
-                <span className="tech-tag">ESP-Hosted</span>
-                <span className="tech-tag">ESP32-C6</span>
-                <span className="tech-tag">NB-IoT</span>
-                <span className="tech-tag">wM-Bus</span>
-              </div>
-              <div className="card-links">
-                <a href="https://github.com/absmach/a1" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
-                  <GitHubIcon />
-                  <span>GitHub</span>
-                </a>
-                <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
-                  <LinkedInIcon />
-                  <span>LinkedIn</span>
-                </a>
+            <div className="project-card reveal project-card--wide">
+              <div className="project-card-inner">
+                <div className="project-card-text">
+                  <span className="project-status status-active">Active</span>
+                  <h3>A1 — Linux-Based Smart Meter Gateway</h3>
+                  <p>
+                    A1 combines the A0 hardware with the BeagleV-Fire RISC-V SBC, where A0
+                    acts as a cape — bringing NB-IoT and wireless M-Bus connectivity
+                    directly to a platform running full-blown Linux. Developed and modified the
+                    option.ko USB serial driver from source to interface with the SIM7080G
+                    cellular module on the A0, enabling AT command communication over Python.
+                    Also achieved WiFi connectivity on the BeagleV-Fire by leveraging the
+                    ESP-Hosted framework — using the onboard ESP32-C6 on A0 as a wireless
+                    network dongle to establish a wlan connection on the host.
+                  </p>
+                  <div className="tech-tags">
+                    <span className="tech-tag">BeagleV-Fire</span>
+                    <span className="tech-tag">RISC-V</span>
+                    <span className="tech-tag">Linux</span>
+                    <span className="tech-tag">SIM7080G</span>
+                    <span className="tech-tag">option.ko</span>
+                    <span className="tech-tag">ESP-Hosted</span>
+                    <span className="tech-tag">ESP32-C6</span>
+                    <span className="tech-tag">NB-IoT</span>
+                    <span className="tech-tag">wM-Bus</span>
+                  </div>
+                  <div className="card-links">
+                    <a href="https://github.com/absmach/a1" target="_blank" rel="noopener noreferrer" className="card-link-btn" aria-label="View on GitHub">
+                      <GitHubIcon />
+                      <span>GitHub</span>
+                    </a>
+                    <a href="#" className="card-link-btn" aria-label="View on LinkedIn">
+                      <LinkedInIcon />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+                <ImageCarousel images={[
+                  { src: '/a0.png',     alt: 'A0 Cape' },
+                  { src: '/beagle.png', alt: 'BeagleV-Fire' },
+                ]} />
               </div>
             </div>
 
