@@ -277,8 +277,22 @@ export default function Homepage() {
               <div className="role">Embedded Systems Engineer</div>
               <p>
                 Designing IoT hardware and firmware for smart metering and connected
-                devices. Leading the A0 gateway project through multiple board revisions,
-                integrating cellular and LPWAN connectivity on RISC-V platforms.
+                devices. Building IoT gateways that run on Linux and Zephyr RTOS for smart
+                meter applications. Leading the A0 gateway project through multiple board
+                revisions, integrating cellular and LPWAN connectivity on RISC-V platforms.
+              </p>
+            </div>
+
+            <div className="timeline-item reveal">
+              <div className="timeline-date">2024</div>
+              <h3>BIDCO Africa</h3>
+              <div className="role">Electronics &amp; Instrumentation Technician</div>
+              <p>
+                Assembly of the Bidco Mariandazi Plant in Ruiru, Kenya. Calculated power
+                needs for various plant sections and installed the appropriate electrical
+                equipment such as circuit breakers and contactors. Routed power cables and
+                set up distribution panels for the plant. Troubleshooting and maintenance
+                of electrical equipment including motors and power generators.
               </p>
             </div>
 
