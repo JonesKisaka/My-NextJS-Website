@@ -272,7 +272,7 @@ export default function Homepage() {
 
           <div className="timeline">
             <div className="timeline-item reveal">
-              <div className="timeline-date">2024 — Present</div>
+              <div className="timeline-date">2025 — Present</div>
               <h3>Abstract Machines &amp; Ultraviolet</h3>
               <div className="role">Embedded Systems Engineer</div>
               <p>
