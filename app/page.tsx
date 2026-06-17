@@ -284,12 +284,12 @@ export default function Homepage() {
 
             <div className="timeline-item reveal">
               <div className="timeline-date">2023</div>
-              <h3>Final Year Project — University</h3>
-              <div className="role">RF &amp; Antenna Design</div>
+              <h3>Nakuja Project, JKUAT</h3>
+              <div className="role">Avionics System Engineer</div>
               <p>
-                Designed and characterised a Yagi-Uda antenna optimised for LoRa telemetry.
-                Applied antenna theory and RF principles to achieve target gain and
-                radiation pattern for long-range wireless communication.
+                Design of the Flight Computer used for a Rocket using the ESP32 as the
+                main microcontroller. Design of the Power Distribution Board and Ejection
+                Board to support the Pyroejection Mechanism.
               </p>
             </div>
           </div>
