@@ -620,6 +620,49 @@ section {
   white-space: pre;
 }
 
+/* ── PROJECTS: MOBILE RESPONSIVENESS ── */
+@media (max-width: 700px) {
+  /* Fixed nav: keep one row but let it scroll instead of overflowing */
+  nav { padding: 0.6rem 0.75rem; }
+  nav ul {
+    gap: 1rem;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  nav ul::-webkit-scrollbar { display: none; }
+  nav ul li { flex: 0 0 auto; }
+  nav ul a { font-size: 0.72rem; letter-spacing: 0.5px; white-space: nowrap; }
+
+  /* Tighter section gutters and clear the fixed nav */
+  section { padding: 4rem 1.1rem 3.5rem; }
+  .section-title { font-size: 1.6rem; margin-bottom: 1.5rem; }
+  .projects-intro { font-size: 0.92rem; margin-bottom: 1.75rem; }
+
+  /* Cards: full-bleed within the gutter, no horizontal overflow */
+  .projects-grid { gap: 1rem; }
+  .project-card { padding: 1.25rem; }
+  .project-card h3 { font-size: 1.1rem; }
+  .project-card-inner { gap: 1.25rem; }
+
+  /* Carousel sizes down with the viewport */
+  .carousel-img-wrap { height: 240px; }
+
+  /* Inline code may wrap rather than force the page wider */
+  .project-card p code,
+  .deepdive-body code { white-space: normal; word-break: break-word; }
+
+  /* Code blocks scroll internally and shrink a touch */
+  .deepdive-code { font-size: 0.7rem; padding: 0.75rem 0.85rem; }
+  .deepdive-body { padding: 0.5rem 1rem 1rem; }
+
+  /* Wrap the affiliation / link rows cleanly */
+  .project-org { font-size: 0.68rem; }
+  .card-links { flex-wrap: wrap; }
+}
+
 /* ── SKILLS ── */
 .skills-grid {
   display: grid;
