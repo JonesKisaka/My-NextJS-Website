@@ -613,6 +613,8 @@ section {
   padding: 0.85rem 1rem;
   margin: 0.5rem 0 0.75rem;
   max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   overflow-x: auto;
 }
 
@@ -621,7 +623,7 @@ section {
   border: none;
   padding: 0;
   color: inherit;
-  white-space: pre;
+  white-space: inherit;
 }
 
 /* ── PROJECTS: MOBILE RESPONSIVENESS ── */
@@ -658,13 +660,7 @@ section {
   .project-card p code,
   .deepdive-body code { white-space: normal; word-break: break-word; }
 
-  /* Code blocks wrap (preserving indentation) instead of scrolling sideways */
-  .deepdive-code,
-  .deepdive-code code {
-    white-space: pre-wrap;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
+  /* Code blocks already wrap (base rule); just shrink them a touch */
   .deepdive-code { font-size: 0.7rem; padding: 0.75rem 0.85rem; }
   .deepdive-body { padding: 0.5rem 1rem 1rem; }
 
