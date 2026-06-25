@@ -335,6 +335,46 @@ section {
   color: var(--text);
 }
 
+.project-org {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin: -0.4rem 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-org .org-name { color: var(--text-dim); }
+
+.project-org .org-sep { color: var(--border); }
+
+.project-org .org-tag {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.62rem;
+  padding: 0.1rem 0.45rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.project-org .org-tag.open { color: var(--accent); border-color: var(--accent-mid); }
+
+.project-org .org-tag.private { color: var(--signal-amber); border-color: #ffb34740; }
+
+.card-private {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+}
+
 .project-card p {
   color: var(--text-dim);
   font-size: 0.95rem;
