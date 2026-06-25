@@ -658,7 +658,13 @@ section {
   .project-card p code,
   .deepdive-body code { white-space: normal; word-break: break-word; }
 
-  /* Code blocks scroll internally and shrink a touch */
+  /* Code blocks wrap (preserving indentation) instead of scrolling sideways */
+  .deepdive-code,
+  .deepdive-code code {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
   .deepdive-code { font-size: 0.7rem; padding: 0.75rem 0.85rem; }
   .deepdive-body { padding: 0.5rem 1rem 1rem; }
 
